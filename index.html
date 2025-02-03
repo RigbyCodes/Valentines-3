@@ -29,16 +29,20 @@
 <!-- JS adds interactivity (button clicks, animations, redirections) -->
 <script>
     function acceptValentine() {
-        window.location.href = "accept.html"; // Redirect to accept page
-        
-        let sound = new Audio("Celebration.mp3"); // Load the sound file
-        sound.play(); // Play the sound
+        let sound = new Audio("celebration.mp3");  // Make sure the file path is correct
+        sound.play();  // Play the sound
 
+        setTimeout(() => {
+             window.location.href = "accept.html";  // Redirect after 1 second
+        }, 1000);  // Delay to ensure the sound plays before redirect
     }
 
     let declineSize = 16; // Initial font size
 
-    function growDecline() { //increases font size of decline button
+    function growDecline() {
+        let booSound = new Audio("boo.mp3");  // Make sure boo.mp3 exists and is in the folder
+        booSound.play();  // Play the boo sound
+
         declineSize += 5; // Increase font size
         document.getElementById("decline").style.fontSize = declineSize + "px";
         //document → Represents the entire webpage (DOM - Document Object Model);
