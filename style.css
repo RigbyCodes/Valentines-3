@@ -4,6 +4,7 @@
 
 
 body {
+    background-color: #FFC0CB; /* Light pink */
     text-align: center;     /* Centers everything */
     font-family: Arial, sans-serif;
     margin-top: 100px;
@@ -20,7 +21,7 @@ h2 {
 .valentine-image1 {
     display: block;
     margin: 20px auto; /* Centers it */
-    width: 300px; /* Adjust size */
+    width: 200px; /* Adjust size */
     border-radius: 10px; /* Optional: makes corners rounded */
 }
 
@@ -31,13 +32,13 @@ h2 {
 }
 
 .valentine-image2 {
-    width: 300px; /* Adjust size */
+    width: 200px; /* Adjust size */
     border-radius: 10px;
     transform: rotate(-10deg); /* Tilts the left image inward */
 }
 
 .valentine-image3 {
-    width: 300px; /* Adjust size */
+    width: 200px; /* Adjust size */
     border-radius: 10px;
     transform: rotate(10deg); /* Tilts the right image inward */
 }
