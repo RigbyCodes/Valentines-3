@@ -32,7 +32,7 @@ h2 {
 }
 
 .valentine-image2 {
-    width: 200px; /* Adjust size */
+    width: 50px; /* Adjust size */
     border-radius: 10px;
     transform: rotate(-10deg); /* Tilts the left image inward */
 }
