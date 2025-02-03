@@ -1,0 +1,39 @@
+<!-- HTML (HyperText Markup Language) → Defines the structure and content of the webpage (headings, buttons, text) -->
+
+<!DOCTYPE html> <!-- Tells the browser this is an HTML5 document -->
+<html lang="en"> <!-- Defines the language -->
+<head> <!--  Contains meta information (title, character set, etc.) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title> <!-- The title that appears in the browser tab -->
+    <link rel="stylesheet" href="style.css"> <!-- Add CSS link to html-->
+</head>
+<body> <!-- Contains all visible content (text, buttons, images, etc.) -->
+
+    <h1>Will you be my Valentine? ❤️</h1> <!-- A large heading that asks the question -->
+
+    <div class="buttons"> <!-- Adding the buttons inside the body; <div class="buttons">--> 
+        <button id="accept">Accept</button> <!--id="accept" allows JS to control it later -->
+        <button id="decline">Decline</button>
+    </div>
+
+</body>
+</html>
+
+<!-- Add javascript to make the buttons interactive -->
+<!-- JS adds interactivity (button clicks, animations, redirections) -->
+<script>
+    function acceptValentine() {
+        window.location.href = "accept.html"; // Redirect to accept page
+    }
+
+    let declineSize = 16; // Initial font size
+
+    function growDecline() { //increases font size of decline button
+        declineSize += 5; // Increase font size
+        document.getElementById("decline").style.fontSize = declineSize + "px";
+    }
+
+    document.getElementById("accept").onclick = acceptValentine; // tells JS to run acceptvalentine() when accept is clicked
+    document.getElementById("decline").onclick = growDecline; // tells JS to run growDecline() when "Decline" is clicked
+</script>
