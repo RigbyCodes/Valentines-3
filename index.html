@@ -29,12 +29,7 @@
 <!-- JS adds interactivity (button clicks, animations, redirections) -->
 <script>
     function acceptValentine() {
-        let sound = new Audio("celebration.mp3");  // Make sure the file path is correct
-        sound.play();  // Play the sound
-
-        setTimeout(() => {
-             window.location.href = "accept.html";  // Redirect after 1 second
-        }, 1000);  // Delay to ensure the sound plays before redirect
+         window.location.href = "accept.html";
     }
 
     let declineSize = 16; // Initial font size
