@@ -12,6 +12,11 @@
 
     <h1>Will you be my Valentine? ❤️</h1> <!-- A large heading that asks the question -->
 
+    <img src="PrayingCat.jpg" alt="A Praying Cat" class="valentine-image1" >
+    <!-- src="valentine.jpg" → This tells the browser where to find the image. -->
+    <!-- alt="A cute Valentine image"-> Describes the image (useful if it doesn’t load) -->
+    <!-- so that you can edit in CSS -->
+
     <div class="buttons"> <!-- Adding the buttons inside the body; <div class="buttons">--> 
         <button id="accept">Accept</button> <!--id="accept" allows JS to control it later -->
         <button id="decline">Decline</button>
@@ -25,6 +30,10 @@
 <script>
     function acceptValentine() {
         window.location.href = "accept.html"; // Redirect to accept page
+        
+        let sound = new Audio("Celebration.mp3"); // Load the sound file
+        sound.play(); // Play the sound
+
     }
 
     let declineSize = 16; // Initial font size
@@ -32,6 +41,12 @@
     function growDecline() { //increases font size of decline button
         declineSize += 5; // Increase font size
         document.getElementById("decline").style.fontSize = declineSize + "px";
+        //document → Represents the entire webpage (DOM - Document Object Model);
+        //.getElementById("decline") → Finds the HTML element with id="decline" (the decline button).
+        //.style → Accesses the CSS styles of that element.
+        //.fontSize → Targets the font size property.
+        //declineSize is a JavaScript variable holding a number (e.g., 16).
+        //"px" is added to make it a valid CSS value (16px)
     }
 
     document.getElementById("accept").onclick = acceptValentine; // tells JS to run acceptvalentine() when accept is clicked

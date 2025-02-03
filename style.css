@@ -1,5 +1,7 @@
 /* Adding CSS ((Cascading Style Sheets) for styling */
 /* Styles the webpage (colors, fonts, button sizes, layout)*/
+/*CSS flexbox to align the images next to each other and CSS transform to rotate them slightly*/
+
 
 body {
     text-align: center;     /* Centers everything */
@@ -9,6 +11,35 @@ body {
 
 h1 {
     font-size: 30px; /*Increases text size*/
+}
+
+h2 {
+    font-size: 20px; /*Increases text size*/
+}
+
+.valentine-image1 {
+    display: block;
+    margin: 20px auto; /* Centers it */
+    width: 300px; /* Adjust size */
+    border-radius: 10px; /* Optional: makes corners rounded */
+}
+
+.image-container {
+    display: flex; /* Makes images appear side by side */
+    justify-content: center; /* Centers them horizontally */
+    gap: 20px; /* Adds space between the images */
+}
+
+.valentine-image2 {
+    width: 300px; /* Adjust size */
+    border-radius: 10px;
+    transform: rotate(-10deg); /* Tilts the left image inward */
+}
+
+.valentine-image3 {
+    width: 300px; /* Adjust size */
+    border-radius: 10px;
+    transform: rotate(10deg); /* Tilts the right image inward */
 }
 
 button {
